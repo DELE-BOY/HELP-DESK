@@ -74,7 +74,7 @@
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn text-white px-4" type="submit" style="background-color: #004282;">
+                    <button class="btn text-white px-4" type="submit" style="background-color: #004281;">
                       <i class="far fa-sign-in-alt text-white" style="margin-right:10px;"></i> SUBMIT
                     </button>
                   </div>
