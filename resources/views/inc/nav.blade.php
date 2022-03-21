@@ -1,22 +1,24 @@
-{{-- 
-<nav>
-    <a href="./HOME PAGE.html"><img src = "{{ asset('img/BUCC.png') }}" alt="BUCC LOGO"> 
-        <style>
-            img {
-              width: 5%;
-              height: 5%;
-            }
-          </style>
-    </a>
-    <div class = "nav-links">
-         <!-- <p>logo.PNG" alt="Aleq" width="160" height="145" / -->
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top">
+    
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/">FHD</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-            <li><a href="./HOME PAGE.html">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Career</a></li>
-            <li><a href="./FIND MY CLASS.html">Find classes</a></li>
-            <li><a href="">Contact</a></li>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="{{route('about')}}l">About</a></li>
+          <li><a href="{{route('careers')}}">Careers</a></li>
+          <li><a href="{{route('blog')}}">Blog</a></li>
+          <li><a href="{{route('contact')}}">Contact</a></li>
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="{{route('register')}}" class="get-started-btn">Get Started</a>
 
     </div>
-</nav> --}}
+  </header><!-- End Header -->
