@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PagesController::class, 'index'])->name('index');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/frontend', [PagesController::class, 'frontend'])->name('frontend');
+Route::get('/backend', [PagesController::class, 'backend'])->name('backend');
+Route::get('/devops', [PagesController::class, 'devops'])->name('devops');
+Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
+Route::get('/excos', [PagesController::class, 'excos'])->name('excos');
+Route::get('/careers', [PagesController::class, 'careers'])->name('careers');
+
 
 
 Route::get('/login', [PagesController::class, 'login'])->name('login');

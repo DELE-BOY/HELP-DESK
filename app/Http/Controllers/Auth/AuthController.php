@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         $user->username = $request->username;
         $user->email = $request->email;
-        $user->password =Hash::make($request->password) ;
+        $user->password = Hash::make($request->password) ;
 
 
         $res = $user->save();
