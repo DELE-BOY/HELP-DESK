@@ -42,4 +42,5 @@ class PagesController extends Controller
      public function careers(){
        return view('pages.careers');
      }
+    
 }

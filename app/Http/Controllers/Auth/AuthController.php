@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -19,20 +20,27 @@ class AuthController extends Controller
          
         ]);
 
-        $user = new User();
+        $user = [
+            'username' => $request->username,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+        ];
 
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->password = Hash::make($request->password) ;
+        
 
 
-        $res = $user->save();
-
+        $res = User::create($user);
+       
         if (!$res) {
             return back()->with('fail', 'something went wrong');
         }
 
-        return back()->with('success', 'Account successfully created');
+        $this->guard()->login($res);
+
+        return redirect('/')->with('success', 'Account successfully created',);
+
+
+
     }
 
     public function loginUser (Request $request){
@@ -53,8 +61,68 @@ class AuthController extends Controller
             return back()->with('fail', 'Incorrect password');
         }
 
-        $request->session()->put('loginId', $user->id);
+       $this->guard()->attempt($this->credentials($request));
 
         return redirect('/')->with('success', 'Account successfully logged in');
     }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+       
+
+        return  redirect('/');
+    }
+
+   /**
+     * Get the guard to be used during registration.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        return Auth::guard();
+    }
+    /**
+     * The user has logged out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return mixed
+     */
+    protected function loggedOut(Request $request)
+    {
+        //
+    }
+     /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function credentials(Request $request)
+    {
+        return $request->only($this->username(), 'password');
+    }
+
+    /**
+     * Get the login username to be used by the controller.
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'username';
+    }
+
 }
