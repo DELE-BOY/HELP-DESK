@@ -117,7 +117,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
   box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
 }
 #header .logo {
@@ -169,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  padding: 15px 0;
 }
 .navbar ul {
   margin: 0;
@@ -468,7 +467,7 @@ section {
 }
 
 .breadcrumbs {
-  margin-top: 73px;
+  margin-top: 100px;
   text-align: center;
   background: #004282;
   padding: 30px 0;
@@ -1268,4 +1267,96 @@ section {
   text-decoration: none;
 }
 
+ .testtimonial{
+            background-color: #ececec;
+            padding:0px 80px;
+            color:#AF421C;
+        }
+       
+        .testtimonial p {
+            color:#004282;
+        }
 
+        
+
+        /* Caption text */
+        .text {
+            color: #F2F2F2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .testtimonial .annoucement-bar-text {
+            text-align: center;
+            padding: 10px 60px;
+            margin-bottom: 0px;
+            margin-top:0px !important;
+            font-family: 'Roboto Condensed';
+        }
+
+        .testtimonial .next,
+        .testtimonial .prev {
+            color: #AF421C;
+        }
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #F2F2F2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media(max-width:420px) {
+
+            .testtimonial,
+            .testtimonial p {
+                padding: 0px 0px !important;
+            }
+        }
+
+        @media(max-width:321px) {
+            .test_img {
+                display: none !important;
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }

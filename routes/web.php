@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\FindClassController;
+
 use App\Http\Controllers\Forum\ForumController;
 use App\Http\Controllers\Pages\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +35,10 @@ Route::get('/forum/create', [ForumController::class, 'create'])->name('create');
 Route::post('/forum/store', [ForumController::class, 'store'])->name('store');
 Route::get('/forum/show/{id}', [ForumController::class, 'show'])->name('show');
 Route::post('answers', [AnswerController::class, 'store'])->name('storeAnswer');
+Route::get('find-class', [FindClassController::class, 'index'])->name('find-class');
+Route::get('find-class/create', [FindClassController::class, 'create'])->name('create-class');
+Route::post('find-class/store', [FindClassController::class, 'store'])->name('store-class');
+Route::get('find-class/show/{id}', [FindClassController::class, 'show'])->name('show-class');
 });
 
 Route::get('/login', [PagesController::class, 'login'])->name('login');
