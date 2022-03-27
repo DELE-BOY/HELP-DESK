@@ -16,21 +16,23 @@ class AuthController extends Controller
         $request->validate([
             'username' => 'required',
             'email' => 'required',
+            'reference' => 'required',
             'password' => 'required',
-         
+
         ]);
 
         $user = [
             'username' => $request->username,
-        'email' => $request->email,
-        'password' => Hash::make($request->password),
+            'email' => $request->email,
+            'reference' => $request->reference,
+            'password' => Hash::make($request->password),
         ];
 
-        
+
 
 
         $res = User::create($user);
-       
+
         if (!$res) {
             return back()->with('fail', 'something went wrong');
         }
@@ -38,17 +40,15 @@ class AuthController extends Controller
         $this->guard()->login($res);
 
         return redirect('/')->with('success', 'Account successfully created',);
-
-
-
     }
 
-    public function loginUser (Request $request){
+    public function loginUser(Request $request)
+    {
         $request->validate([
-            
+
             'username' => 'required',
             'password' => 'required',
-         
+
         ]);
 
         $user = User::where('username', '=', $request->username)->first();
@@ -61,7 +61,7 @@ class AuthController extends Controller
             return back()->with('fail', 'Incorrect password');
         }
 
-       $this->guard()->attempt($this->credentials($request));
+        $this->guard()->attempt($this->credentials($request));
 
         return redirect('/')->with('success', 'Account successfully logged in');
     }
@@ -80,12 +80,12 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-       
+
 
         return  redirect('/');
     }
 
-   /**
+    /**
      * Get the guard to be used during registration.
      *
      * @return \Illuminate\Contracts\Auth\StatefulGuard
@@ -104,7 +104,7 @@ class AuthController extends Controller
     {
         //
     }
-     /**
+    /**
      * Get the needed authorization credentials from the request.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -124,5 +124,4 @@ class AuthController extends Controller
     {
         return 'username';
     }
-
 }

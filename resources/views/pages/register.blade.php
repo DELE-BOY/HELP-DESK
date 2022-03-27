@@ -54,7 +54,14 @@
                   <input class="form-control" type="Email" placeholder="Enter your email" id="email" name="email">
                 
                 </div>
-                <span class="text-danger">@error('email')* {{$message}} @enderror</span>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend"><span class="input-group-text">
+                      <i class="far fa-lock"></i>
+                    </span></div>
+                  <input class="form-control" type="text" placeholder="Enter your reference number" id="reference" name="reference">
+                
+                </div>
+                <span class="text-danger">@error('reference')* {{$message}} @enderror</span>
                 <div class="input-group mb-4">
                   <div class="input-group-prepend"><span class="input-group-text">
                       <i class="far fa-lock"></i>

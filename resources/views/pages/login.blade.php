@@ -81,7 +81,7 @@
   
                   <h2>Welcome</h2> 
                   <p>We want to create a medium through which students can seek direction and recieve guidance on how to process thei registration into BUCC.</p>
-                  <a class="btn btn-lg btn-outline-light mt-3" target="_blanks" href="./FHD SIGN UP.html"> <i classfar fa-house-return" style="margin-right:10px;">
+                  <a class="btn btn-lg btn-outline-light mt-3" target="_blanks" href="{{ route('register') }}"> <i classfar fa-house-return" style="margin-right:10px;">
                   </i> Register </a>
                 </div>
               </div>
