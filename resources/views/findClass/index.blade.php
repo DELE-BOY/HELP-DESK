@@ -6,8 +6,7 @@
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
                 <h2>Find My Class</h2>
-                <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit
-                    quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                <p> Welcome to a navigation guide that helps you locate your classes at your fingertip. </p>
             </div>
         </div><!-- End Breadcrumbs -->
         <div class="container">

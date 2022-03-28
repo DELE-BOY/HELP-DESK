@@ -36,12 +36,14 @@
              <ul>
                  <li><a class="active" href="/">Home</a></li>
                  <li><a href="{{ route('about') }}">About</a></li>
-                 <li><a href="{{ route('careers') }}">Careers</a></li>
                  <li><a href="{{ route('blog') }}">Blog</a></li>
                  <li><a href="{{ route('contact') }}">Contact</a></li>
+                 
+                 @if (Auth::check())
+                 <li><a href="{{ route('careers') }}">Careers</a></li>
+                
                  <li><a href="{{ route('forum') }}">Forum</a></li>
                  <li><a href="{{ route('find-class') }}">Find My Class</a></li>
-                 @if (Auth::check())
                      <li> <a href=""><i class='bx bxs-user-circle '>{{ Auth::user()->username }}</i></a></li>
 
                      <a href="{{ route('logout') }}" class="mx-4">Logout</a>
