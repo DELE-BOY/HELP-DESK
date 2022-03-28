@@ -52,6 +52,8 @@ class ForumController extends Controller
         $forum = Forum::find($id);
 
         $answer = $forum->answer()->get();
+
+       
       
         return view('forum.show', compact('forum', 'answer'));
     }

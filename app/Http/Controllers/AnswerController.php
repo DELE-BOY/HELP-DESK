@@ -19,15 +19,17 @@ class AnswerController extends Controller
         $comment->forum_id = $inputs['forum_id'];
         $comment->save();
 
-        Session::flash('success', 'Respuesta agregada exitosamente');
+       
 
         return redirect()->back();
     } 
 
-    public function destroy(Answer $answer)
+    public function destroy($id)
     {
+
+        $answer = Answer::find($id);
         $answer->delete();
-        Session::flash('success', 'Respuesta removida exitosamente');
+        
         return redirect()->back();
     }
  

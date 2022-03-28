@@ -35,6 +35,7 @@ Route::get('/forum/create', [ForumController::class, 'create'])->name('create');
 Route::post('/forum/store', [ForumController::class, 'store'])->name('store');
 Route::get('/forum/show/{id}', [ForumController::class, 'show'])->name('show');
 Route::post('answers', [AnswerController::class, 'store'])->name('storeAnswer');
+Route::delete('answers/delete/{id}', [AnswerController::class, 'destroy'])->name('deleteAnswer');
 Route::get('find-class', [FindClassController::class, 'index'])->name('find-class');
 Route::get('find-class/create', [FindClassController::class, 'create'])->name('create-class');
 Route::post('find-class/store', [FindClassController::class, 'store'])->name('store-class');

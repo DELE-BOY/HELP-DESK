@@ -21,35 +21,49 @@
                 <br>
 
                 {{-- Comentario del resto de los participantes --}}
-        <div class="" >
-            @foreach ($answer as $answers)
-                <div class="row mt-3">
-                    <div class="col">
-                        
-                       
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="">
+                    @foreach ($answer as $answers)
+                        <div class="row mt-3">
+                            <div class="col">
+
+
+
 
                                 <div class="card" style="width: 69rem;">
-                                    
+                                    <div class="card-header">
+                                        <b>{{ $answers->user->username }}</b>
+                                    </div>
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
                                             <p class="card-text">
-                                                {{ $answers->answer }}
+                                                <strong>Answer: </strong> {{ $answers->answer }}
                                             </p>
                                         </blockquote>
+
+                                        @if (Auth::user()->id == $answers->user_id)
+                                          
+                                            <form action="{{ route('deleteAnswer', $answers->id) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-danger">
+                                                    Delete
+                                                </button>
+                                                @method('DELETE')
+
+                                            </form>
+                                        @endif
                                     </div>
                                 </div>
 
-                             
-                                   
 
 
-                            </li>
-                        
-                    </div>
+
+
+
+
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-            @endforeach
-        </div>
 
                 <br>
                 <form action="{{ route('storeAnswer') }}" method="post">
@@ -66,7 +80,7 @@
                     </div>
                     <br>
                     <br>
-                    <input name="forum_id" type="hidden" value="{{$forum->id}}">
+                    <input name="forum_id" type="hidden" value="{{ $forum->id }}">
                     <div class="col-4 mb-4">
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
