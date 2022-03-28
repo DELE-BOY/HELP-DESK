@@ -54,14 +54,7 @@
                   <input class="form-control" type="Email" placeholder="Enter your email" id="email" name="email">
                 
                 </div>
-                <div class="input-group mb-4">
-                  <div class="input-group-prepend"><span class="input-group-text">
-                      <i class="far fa-lock"></i>
-                    </span></div>
-                  <input class="form-control" type="text" placeholder="Enter your reference number" id="reference" name="reference">
-                
-                </div>
-                <span class="text-danger">@error('reference')* {{$message}} @enderror</span>
+               
                 <div class="input-group mb-4">
                   <div class="input-group-prepend"><span class="input-group-text">
                       <i class="far fa-lock"></i>
@@ -70,6 +63,14 @@
                 
                 </div>
                 <span class="text-danger">@error('password')* {{$message}} @enderror</span>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend"><span class="input-group-text">
+                      <i class="far fa-lock"></i>
+                    </span></div>
+                  <input class="form-control" type="password" placeholder="Confirm Password" id="password_confirmation" name="password_confirmation">
+                
+                </div>
+            
                 
                 <div class="form-group row">
                   <div class="col-md-12 col-form-label">
@@ -122,12 +123,14 @@
       // Change Password Script
       function showPassword() {
         var x = document.getElementById("password");
-   
-        if (x.type === "password") {
+   var y = document.getElementById("password_confirmation");
+        if (x.type === "password" && y.type === "password") {
           x.type = "text";
+          y.type = "text";
          ;
         } else {
           x.type = "password";
+          y.type = "password";
      
         }
       }

@@ -96,7 +96,7 @@
                   <h4>EXECUTIVE PRESIDENT <br> SOFTWARE ENGINERRING</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    A healthy stomach is the source of an innovative mind,<br>FOOD FIRST! <br> EAT <br>SLEEP<br>CODE<br>REPEAT<br>
+                    A healthy stomach is the source of an innovative mind,<br>FOOD FIRST!|EAT|SLEEP|CODE|REPEAT
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
