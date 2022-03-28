@@ -6,7 +6,7 @@
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      <p> For more information contact us at </p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -25,19 +25,19 @@
             <div class="address">
               <i class="bi bi-geo-alt"></i>
               <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p> Ilishan-Remo, Ogun State, Nigeria</p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>info@babcock.edu.ng</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <p>+234-703204941</p>
             </div>
 
           </div>

@@ -5,11 +5,9 @@
   <!-- ======= Breadcrumbs ======= -->
   <div class="breadcrumbs">
     <div class="container">
-      <h2>Careers</h2>
+      <h2>CAREERS</h2>
       <p>
-        Est dolorum ut non facere possimus quibusdam eligendi voluptatem.
-        Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis
-        ipsam aperiam consequatur laboriosam nemo harum praesentium.
+        HERE YOU CAN SEE VARIOUS CAREER PATHS THAT YOU CAN EMBRACE TO PREPARE YOU AHEAD 
       </p>
     </div>
   </div>
