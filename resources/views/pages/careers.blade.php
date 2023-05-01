@@ -7,7 +7,7 @@
     <div class="container">
       <h2>CAREERS</h2>
       <p>
-        HERE YOU CAN SEE VARIOUS CAREER PATHS THAT YOU CAN EMBRACE TO PREPARE YOU AHEAD 
+        HERE YOU CAN SEE VARIOUS CAREER PATHS THAT YOU CAN EMBRACE TO DEVELOP YOURSELF
       </p>
     </div>
   </div>
